@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+body,
+ul,
+li,
+h1,
+h2,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #345;
+  background: url(./img/poligonos.png) repeat top;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.main-image {
+    height: auto;
+    width: 100%;
+}
+
+.bg-primary {
+    background-color: #74978C;
+}
+
+.color-primary {
+    color: #74978C;
+}
+
+.bg-secondary{
+    background-color: #FFC289;
+}
+.color-secondary {
+    color: #FFC289;
+}
