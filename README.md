@@ -18,7 +18,7 @@
 
 <div align="center">
     <img src="https://i.imgur.com/yGKMCHk.png" alt="Home">
-    <img src="https://i.imgur.com/yGKMCHk.png" alt="Service">
+    <img src="https://i.imgur.com/jyIwli0.png" alt="Service">
 </div>
 
 <div align="center">
