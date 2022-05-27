@@ -25,8 +25,16 @@ img {
 }
 
 .main-image {
+    margin-left: 200px;
     height: auto;
     width: 100%;
+}
+
+.bike-image {
+    left: -450px;
+    top: -600px;
+    height: auto;
+    width: 60%;
 }
 
 .bg-primary {
@@ -40,6 +48,7 @@ img {
 .bg-secondary{
     background-color: #FFC289;
 }
+
 .color-secondary {
     color: #FFC289;
 }

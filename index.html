@@ -55,7 +55,7 @@
 
     <div class="container mx-auto pt-10">
         <div class="flex flex-wrap items-start justify-center ">
-            <div class="flex flex-wrap pt-16 w-2/4">
+            <div class="flex flex-wrap pt-28 w-2/4">
                 <div>
                     <h2 class="font-bold text-7xl text-gray-800">
                         Estamos prontos para entregar sua mercadoria
@@ -65,7 +65,7 @@
                     </p>
                 </div>
 
-                <div class="flex items-center pt-8">
+                <div class="flex flex-wrap items-center pt-8">
                     <div class="flex items-center justify-center rounded-full text-white w-36 h-12 bg-primary">
                         <span class="material-symbols-rounded text-white text-lg pr-2">search</span>
                         <a href="">
@@ -80,20 +80,122 @@
                 </div>
             </div>
 
-            <div class="w-2/4 flex items-center justify-center">
+            <div class="w-2/4 flex flex-wrap items-center justify-center">
                 <div class="flex justify-center">
                     <img src="./src/assets/img/delivery-man-bike.png" alt="Entregador" class="main-image">
                 </div>
             </div>
         </div>
 
-        <div class="flex items-center justify-start gap-x-6">
-            <div>
-                <p>Serviço de entrega sustentável</p>
+        <div class="relative">
+            <div class="absolute flex items-center gap-x-6 -top-10">
+                <div>
+                    <p class="text-gray-500">Serviço de entrega sustentável</p>
+                </div>
+                <div class="bg-primary h-2 w-52 rounded-full"></div>
             </div>
-            <div class="bg-primary h-2 w-52 rounded-full"></div>
         </div>
     </div>
+
+    <div class="container mx-auto pt-4 pb-20">
+        <div class="flex items-center justify-center ">
+            <div class="w-2/4">
+                <div class="flex flex-wrap mt-6">
+                    <h2 class="font-bold text-7xl text-gray-800">
+                        Encontre o entregador perfeito
+                    </h2>
+                    <p class="font-medium text-gray-400 text-xl pt-7">
+                        Informe o seu endreço e o local de coleta
+                    </p>
+                    <p class="font-light text-gray-400 text-lg pt-4 w-8/12">
+                        Essas informações serão necessárias para que possamos localizar o entregador mais próximo a você
+                    </p>
+                </div>
+
+                <div class="bg-primary h-2 mt-12 w-52 rounded-full"></div>
+
+                <div class="flex flex-col pt-2">
+                    <form action="" method="POST">
+                        <div class="py-8">
+                            <input type="text"
+                                class="appearance-none border-2 border-bg-neutral-400 rounded-lg w-9/12 py-3 px-5 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-800" placeholder="Minha localização atual">
+                        </div>
+                        <div>
+                            <input type="text" class="appearance-none border-2 border-bg-neutral-400 rounded-lg w-9/12  py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-800" placeholder="Local para coleta da minha mercadoria">
+                        </div>
+                        <div class="pt-8">
+                            <button type="submit">
+                                <a class="bg-primary flex items-center justify-center rounded-lg w-56 h-12 text-white">
+                                    Localizar entregador
+                                </a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="relative top-32">
+                    <img src="./src/assets/img/vertical-decoration.png" alt="">
+                </div>
+            </div>
+
+            <div class="w-2/4 pt-48">
+                <img src="./src/assets/img/delivery-man-bike-phone.png" alt="" class="main-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="relative flex items-start justify-center h-screen mb-12 overflow-hidden ">
+        <div class="relative z-30 flex items-start justify-center pt-24">
+            <div class="w-5/12 px-16 mx-24">
+                <div>
+                    <h2 class="font-bold text-5xl color-primary">
+                        Entenda um pouco mais sobre nossos objetivos
+                    </h2>
+                    <p class="font-light text-gray-600 text-lg pt-12 w-8/12">
+                        Conheça um pouco dos nossos objetivos e ajude os nossos <strong class="font-bold">heróis</strong> a combater
+                        o nosso inimigo em comum!
+                    </p>
+                </div>
+            </div>
+            <div class="w-5/12 text-white text-gray-600 text-lg pr-64">
+                <div>
+                    <p class="py-6">
+                        Nem todo <strong class="font-bold">herói</strong> usa capa, às vezes eles usam bicicletas! Essa é a filosofia da <strong class="font-bold">Bikelivery</strong>, uma
+                        empresa com o objetivo de realizar entregas para os nossos clientes, gerar empregos e
+                        principalmente ajudar o nosso meio ambiente.
+                    </p>
+                    <p class="py-6">
+                        Nossa missão é juntamente com os nossos poderosos <strong class="font-bold">bike messengers</strong> realizar as entregas
+                        solicitadas pelos nossos clientes e poder salvar o ar que respiramos.
+                    </p>
+                    <p class="py-6">
+                        Essa <strong class="font-bold">missão díaria</strong> conta com algumas ajudas que fazem toda a diferença: Gastos
+                        consideravelmente menores com manutenções, sem a necessidade de portar uma CNH,
+                        facilidade no transporte e sem custos com combustivel.
+                    </p>
+                    <p class="py-6">
+                        O melhor de tudo isso é que você já possui algo em comum com nossos entregadores.
+                        Os <strong class="font-bold">herói</strong>! Nos ajude a combater a poluição no ar, poluição sonora, emissão de carbono
+                        e etc. <strong class="font-bold">Seja um herói</strong> também e nos ajude a salvar o nosso planeta!
+                    </p>
+                </div>
+
+                <div class="pt-8">
+                    <img src="./src/assets/img/footer-bike.png" alt="">
+                </div>
+            </div>
+        </div>
+        <video autoplay loop muted class="absolute z-10 w-auto opacity-10">
+            <source src="./src/assets/img/video-background.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        </d>
+    </div>
+
+    <div>
+        <img src="./src/assets/img/bike.png" alt="" class="bike-image relative">
+    </div>
+
 </body>
 
 </html>
