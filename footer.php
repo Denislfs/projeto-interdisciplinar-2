@@ -11,9 +11,6 @@
     position: absolute;
     bottom: 1;  
     width: 100%;
-    background-color: #f0f8ff; !important
-    /*text-align: center;
-    line-height: 100px;*/
     }
     </style>
 </header>

@@ -38,14 +38,14 @@ $("#cep").blur(function () {
                     $("#bairro").val(dadosRetorno.bairro);
                     $("#cidade").val(dadosRetorno.localidade);
                     $("#uf").val(dadosRetorno.uf);
-                } //end if.
+                } //end if
                 else {
                     //CEP pesquisado não foi encontrado.
                     $(this)[0].reset();
                     alert("CEP não encontrado.");
                 }
             });
-        } //end if.
+        } //end if
         else {
             //cep é inválido.
             $(this)[0].reset();
