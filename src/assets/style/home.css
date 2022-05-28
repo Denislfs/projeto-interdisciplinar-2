@@ -16,7 +16,6 @@ ul {
 body {
   font-family: "Poppins", sans-serif;
   color: #345;
-  background: url(./img/poligonos.png) repeat top;
 }
 
 img {
@@ -25,9 +24,11 @@ img {
 }
 
 .main-image {
-    margin-left: 200px;
+    margin-left: 180px;
     height: auto;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .bike-image {
@@ -35,6 +36,23 @@ img {
     top: -600px;
     height: auto;
     width: 60%;
+    z-index: 0;
+}
+
+.poligonos-image {
+    position: absolute;
+    display: block;
+    opacity: 100%;
+    right: 0px;   
+    object-fit: cover;
+    height: 70rem;
+    z-index: 0;
+}
+
+.contact-content {
+    position: relative;
+    top: -45rem;
+    z-index: 1;
 }
 
 .bg-primary {
