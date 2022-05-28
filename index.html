@@ -14,14 +14,12 @@
     <link rel="stylesheet" href="./src/assets/style/home.css" />
 
     <!-- Google icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -37,7 +35,29 @@
                     </li>
                     <li class="flex items-center justify-center">
                         <a href="#">Serviços</a>
-                        <span class="material-symbols-rounded text-gray-400">arrow_drop_down</span>
+                        <div x-data="{ dropdownOpen: false }" class="relative">
+                            <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded-md bg-white p-2 focus:outline-none">
+                                <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" 
+                                    />
+                                </svg>
+                            </button>
+
+                            <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                            <div x-show="dropdownOpen"
+                                class="absolute right-0 mt-1 py-2 w-48 bg-white rounded-md shadow-lg z-20 border border-gray-100">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
+                                    Seja um entregador
+                                </a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
+                                    Seja uma empresa parceira
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <a href="#">Quem somos</a>
@@ -48,7 +68,7 @@
                 </ul>
             </div>
             <div class="flex items-center justify-center rounded-full text-white w-28 h-10 bg-primary">
-                <a href="#">Login</a>
+                <a href="./src/screens/login.html">Login</a>
             </div>
         </nav>
     </header>
@@ -121,14 +141,26 @@
                 <div class="flex flex-col pt-2">
                     <form action="" method="POST">
                         <div class="py-8">
-                            <input type="text"
-                                class="appearance-none border-2 border-bg-neutral-400 rounded-lg w-9/12 py-3 px-5 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-800"
-                                placeholder="Minha localização atual">
+                            <div class="relative flex w-full flex-wrap items-stretch">
+                                <span
+                                    class="material-symbols-rounded z-10 h-full leading-snug absolute text-center text-gray-300 absolute bg-transparent rounded text-lg items-center justify-center w-8 pl-4 pr-4 py-3">
+                                    navigation
+                                </span>
+                                <input type="text"
+                                    class="appearance-none border-2 border-bg-neutral-400 rounded-lg w-9/12 py-3 px-10 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-800"
+                                    placeholder="Minha localização atual">
+                            </div>
                         </div>
                         <div>
-                            <input type="text"
-                                class="appearance-none border-2 border-bg-neutral-400 rounded-lg w-9/12  py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-800"
-                                placeholder="Local para coleta da minha mercadoria">
+                            <div class="relative flex w-full flex-wrap items-stretch">
+                                <span
+                                    class="material-symbols-rounded z-10 h-full leading-snug absolute text-center text-gray-300 absolute bg-transparent rounded text-lg items-center justify-center w-8 pl-4 pr-4 py-3">
+                                    navigation
+                                </span>
+                                <input type="text"
+                                    class="appearance-none border-2 border-bg-neutral-400 rounded-lg w-9/12  py-3 px-10 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-800"
+                                    placeholder="Local para coleta da minha mercadoria">
+                            </div>
                         </div>
                         <div class="pt-8">
                             <button type="submit">
@@ -151,9 +183,7 @@
         </div>
     </div>
 
-
-
-    <div class="relative flex items-start justify-center h-screen mb-12 overflow-hidden ">
+    <div class="relative flex items-start justify-center h-screen overflow-hidden ">
         <div class="relative z-30 flex items-start justify-center pt-24">
             <div class="w-5/12 px-16 mx-24">
                 <div>
@@ -213,7 +243,7 @@
 
     <div class="contact-content">
         <div class="relative">
-            <img src="./src/assets/img/poligonos.png" alt="" class="poligonos-image">
+            <img src="./src/assets/img/poligonos.png" alt="" class="poligonos-image-footer">
         </div>
         <div class="container mx-auto flex items-center justify-center">
             <div class="w-2/4">
@@ -229,7 +259,10 @@
                 </div>
                 <div class="pt-12">
                     <div>
-                        <h2 class="font-semibold text-2xl text-gray-500">Seja um entregador</h2>
+                        <div class="flex items-center">
+                            <div class="bg-secondary w-2 h-10 mr-4 rounded-full"></div>
+                            <h2 class="font-semibold text-2xl text-gray-500">Seja um entregador</h2>
+                        </div>
                         <p class="font-light text-gray-600 text-lg pt-4 w-8/12">
                             Ao passar pelo processo para se tornar um entregador, você terá acesso a uma
                             dashboard personalizada com todos os pedidos disponiveis próximo a você.
@@ -238,7 +271,11 @@
                 </div>
                 <div class="pt-12">
                     <div>
-                        <h2 class="font-semibold text-2xl text-gray-500">Seja uma empresa parceira</h2>
+                        <div class="flex items-center">
+                            <div class="bg-secondary w-2 h-10 mr-4 rounded-full"></div>
+                            <h2 class="font-semibold text-2xl text-gray-500">Seja uma empresa parceira</h2>
+                        </div>
+
                         <p class="font-light text-gray-600 text-lg pt-4 w-8/12">
                             Ao se tornar uma empresa parceira você terá acesso aos nossos
                             entregadores e disponibilidade para envios com beneficios especiais!
@@ -259,7 +296,10 @@
                 <img src="./src/assets/img/delivery-main-bike-footer.png" alt="" class="main-image">
             </div>
         </div>
-
     </div>
+
 </body>
+
 </html>
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>

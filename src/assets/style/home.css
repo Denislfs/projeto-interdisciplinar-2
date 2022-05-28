@@ -16,6 +16,7 @@ ul {
 body {
   font-family: "Poppins", sans-serif;
   color: #345;
+  height: 180px;
 }
 
 img {
@@ -41,11 +42,18 @@ img {
 
 .poligonos-image {
     position: absolute;
-    display: block;
     opacity: 100%;
     right: 0px;   
-    object-fit: cover;
     height: 70rem;
+    z-index: 0;
+}
+
+.poligonos-image-footer {
+    position: absolute;
+    opacity: 100%;
+    right: 0px;   
+    top: -120px;
+    height: 60rem;
     z-index: 0;
 }
 
@@ -53,6 +61,7 @@ img {
     position: relative;
     top: -45rem;
     z-index: 1;
+    width: auto;
 }
 
 .bg-primary {
