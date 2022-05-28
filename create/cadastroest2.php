@@ -25,11 +25,11 @@ class DataBaseService {
     public function adicionarEstabelecimento($cnpj, $razao_social, $nome_fantasia, $telefone, $cep, $uf, $cidade, $bairro, $rua, $numero) {
 
             // Preparando o comando SQL
-            $sql = "INSERT INTO estabelecimento (`cnpj`, `razao_social`, `nome_fantasia`, `telefone`, `cep`, `uf`, `cidade`, `bairro`, ` rua`, `numero`) ";
+            $sql = "INSERT INTO estabelecimento (`cnpj`, `razao_social`, `nome_fantasia`, `telefone`, `cep`, `uf`, `cidade`, `bairro`, `rua`, `numero`) ";
             $sql = $sql."VALUES (".$cnpj.", '".$razao_social."', '".$nome_fantasia."', ".$telefone.", '".$cep."', '".$uf."', '".$cidade."', '".$bairro."', '".$rua."', ".$numero." ) ";
         echo $sql;
             if(mysqli_query($this->conn, $sql)) {
-                header("location: ../src/cadastroest.php?status=sucess");
+                header("location: ../cadastroest.php?status=sucess");
             } else {
                 echo("Falha ao realizar o cadastro" . $sql . mysqli_error($this->conn));
             }
