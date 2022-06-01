@@ -1,21 +1,21 @@
 <div align="center">
     <h1> Projeto interdisciplinar</h1>
-    <code>Ação contra a mudança global do clima </code>
 </div>
+
+<br>
 
 <div align="center">
-    <br>
-    <br>
-    <h3>✨Sobre nosso projeto✨</h3>
-    <br>
     <p>
-        Nem todo herói usa capa, às vezes eles usam bicicletas! Essa é a filosofia da <strong>Bikelivery</strong>, uma empresa com o objetivo de realizar entregas para os nossos clientes, gerar empregos e principalmente ajudar o nosso meio ambiente.
+        Nem todo herói usa capa, às vezes eles usam bicicletas! Essa é a filosofia da <strong>Bikelivery</strong>, uma
+        empresa com o objetivo de realizar entregas para os nossos clientes, gerar empregos e principalmente ajudar o
+        nosso meio ambiente.
     </p>
     <p>
-        Nossa missão é juntamente com os nossos poderosos bike messengers realizar as entregas solicitadas pelos nossos clientes e poder salvar o ar que respiramos.
+        Nossa missão é juntamente com os nossos poderosos bike messengers realizar as entregas solicitadas pelos nossos
+        clientes e poder salvar o ar que respiramos.
     </p>
-</div>
 
+</div>
 <div align="center">
     <img src="https://i.imgur.com/yGKMCHk.png" alt="Home">
     <img src="https://i.imgur.com/jyIwli0.png" alt="Service">
@@ -23,9 +23,21 @@
 
 <div align="center">
     <br>
+    <h2>Para levantar o projeto na sua maquina:</h2>
     <br>
+    <p> 1. Realize o clone do repositório </p>
+    <p> 2. Após abrir o projeto, levante o servidor php com o comando <code>php -S localhost:8080</code></p>
+    <p> 3. Acesse o localhost em seu navegador de preferência</p>
+    <code>Requisitos: É necessário ter o php instalado na sua maquina</code>
+</div>
+
+<div align="center">
+    <br>
+    <br>
+    <h2>Junte-se a nós</h2>
     <p>
-        Caso tenha se interessado pela nossa causa, você pode se juntar a nós como uma <strong>empresa parceira</strong> ou se tornando um <strong>entregador</strong>.
+        Caso tenha se interessado pela nossa causa, você pode se juntar a nós como uma <strong>empresa parceira</strong>
+        ou se tornando um <strong>entregador</strong>.
     </p>
 </div>
 
@@ -43,31 +55,31 @@
             </td>
             <td align="center">
                 <a href="https://github.com/juliatangerino">
-                    <img src="https://pps.whatsapp.net/v/t61.24694-24/261297518_427193629027905_7156472741257448480_n.jpg?ccb=11-4&oh=4118f682fa0780152465ce4b6298c236&oe=629C0D3E"
-                        width="100px;" alt="Foto da Juliana Tangerino" />
+                    <img src="https://pps.whatsapp.net/v/t61.24694-24/261297518_427193629027905_7156472741257448480_n.jpg?ccb=11-4&oh=4118f682fa0780152465ce4b6298c236&oe=629C0D3E" width="100px;" alt="Foto da Juliana Tangerino" />
                     <br>
-                    <sub> <b>Juliana Tangerino</b> </sub> </a>
+                    <sub> <b>Juliana Tangerino</b> </sub> 
+                </a>
             </td>
             <td align="center">
                 <a href="https://github.com/Denislfs">
-                    <img src="https://pps.whatsapp.net/v/t61.24694-24/121077744_1008220806343115_6445234113877075963_n.jpg?ccb=11-4&oh=01_AVyzn-kDBFp-ak0SVERLVxh1KZkqbVhKiZN_pjeh9oBfFQ&oe=629B1CB5"
-                        width="100px;" alt="Foto do Denis" />
+                    <img src="https://pps.whatsapp.net/v/t61.24694-24/121077744_1008220806343115_6445234113877075963_n.jpg?ccb=11-4&oh=01_AVyzn-kDBFp-ak0SVERLVxh1KZkqbVhKiZN_pjeh9oBfFQ&oe=629B1CB5" width="100px;" alt="Foto do Denis" />
                     <br>
-                    <sub> <b>Denis</b> </sub> </a>
+                    <sub> <b>Denis</b> </sub> 
+                </a>
             </td>
             <td align="center">
                 <a href="https://github.com/vitoreduardomanhaspereira">
-                    <img src="https://pps.whatsapp.net/v/t61.24694-24/55939621_427868168024006_7892795940262641664_n.jpg?ccb=11-4&oh=01_AVwM2ZHi92ytzEIpNlmgD_B9xgU73NKiJcAmKzS05pyvMQ&oe=629D3190"
-                        width="100px;" alt="Foto do Victor" />
+                    <img src="https://pps.whatsapp.net/v/t61.24694-24/55939621_427868168024006_7892795940262641664_n.jpg?ccb=11-4&oh=01_AVwM2ZHi92ytzEIpNlmgD_B9xgU73NKiJcAmKzS05pyvMQ&oe=629D3190" width="100px;" alt="Foto do Victor" />
                     <br>
-                    <sub> <b>Vitor Pereira</b> </sub> </a>
+                    <sub> <b>Vitor Pereira</b> </sub> 
+                </a>
             </td>
             <td align="center">
                 <a href="https://github.com/LailaStence">
-                    <img src="https://avatars.githubusercontent.com/u/62487766?v=4" width="100px;"
-                        alt="Foto da Laila" />
+                    <img src="https://avatars.githubusercontent.com/u/62487766?v=4" width="100px;" alt="Foto da Laila"  />
                     <br>
-                    <sub> <b>Laila M. Stence</b> </sub> </a>
+                    <sub> <b>Laila M. Stence</b> </sub> 
+                </a>
             </td>
         </tr>
     </table>
