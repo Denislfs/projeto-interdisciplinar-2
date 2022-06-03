@@ -26,7 +26,7 @@ class DataBaseService {
 
             // Preparando o comando SQL
             $sql = "INSERT INTO  (`id`, `cnpj`, `id_categoria`, `valor`, `data_pedido`, `disponivel`, `dimensao`, `peso`, `rua`, `numero`, `bairro`, `cidade`, `complemento` ) ";
-            $sql = $sql."VALUES () ";
+            $sql = $sql."VALUES (".$id.", ".$cnpj.", ".$id_categoria.", ".$valor.", '".$data_pedido."', ".$disponivel.", ".$dimensap.", ".$peso.", '".$rua."', ".$numero.", '".$bairro."', '".$cidade."', '".$complemento."') ";
         echo $sql;
             if(mysqli_query($this->conn, $sql)) {
                 header("location: ../.php?status=sucess");
