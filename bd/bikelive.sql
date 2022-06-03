@@ -59,7 +59,6 @@ END$$
 DELIMITER ;
 
 -- --------------------------------------------------------
-
 --
 -- Estrutura da tabela `categoria`
 --
