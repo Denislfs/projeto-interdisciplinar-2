@@ -25,7 +25,7 @@ class DataBaseService {
     public function adicionarPedido() {
 
             // Preparando o comando SQL
-            $sql = "INSERT INTO  () ";
+            $sql = "INSERT INTO  (`id`, `cnpj`, `id_categoria`, `valor`, `data_pedido`, `disponivel`, `dimensao`, `peso`, `rua`, `numero`, `bairro`, `cidade`, `complemento` ) ";
             $sql = $sql."VALUES () ";
         echo $sql;
             if(mysqli_query($this->conn, $sql)) {
