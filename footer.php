@@ -11,8 +11,7 @@
     <footer class="bg-light text-center text-lg-start bottom-px">
         <!-- Copyright -->
         <div class="text-center p-3 bottom-px">
-            © 2022 Copyright:
-            <a class="text-dark" href=""></a>
+          <a class="text-dark" href="github.com/juliatangerino/projeto-interdisciplinar-2">  © 2022 Copyright</a>
         </div>
         <!-- Copyright -->
     </footer>
