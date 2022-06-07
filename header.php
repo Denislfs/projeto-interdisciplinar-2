@@ -51,6 +51,10 @@
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
                                     Seja uma empresa parceira
                                 </a>
+                                <a href="cadastropedido.php"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
+                                    Faça um pedido
+                                </a>
                             </div>
                         </div>
                     </li>
