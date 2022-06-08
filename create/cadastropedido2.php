@@ -22,11 +22,11 @@ class DataBaseService {
     }
 
 
-    public function adicionarPedido($id, $cnpj, $id_categoria, $valor, $data_pedido, $disponivel, $dimensao, $peso, $rua, $numero, $bairro, $cidade, $complemento) {
+    public function adicionarPedido($cnpj, $id_categoria, $valor, $data_pedido, $disponivel, $dimensao, $peso, $rua, $numero, $bairro, $cidade, $complemento) {
 
             // Preparando o comando SQL
-            $sql = "INSERT INTO  (`id`, `cnpj`, `id_categoria`, `valor`, `data_pedido`, `disponivel`, `dimensao`, `peso`, `rua`, `numero`, `bairro`, `cidade`, `complemento` ) ";
-            $sql = $sql."VALUES (".$id.", ".$cnpj.", ".$id_categoria.", ".$valor.", '".$data_pedido."', ".$disponivel.", ".$dimensao.", ".$peso.", '".$rua."', ".$numero.", '".$bairro."', '".$cidade."', '".$complemento."') ";
+            $sql = "INSERT INTO  (`cnpj`, `id_categoria`, `valor`, `data_pedido`, `disponivel`, `dimensao`, `peso`, `rua`, `numero`, `bairro`, `cidade`, `complemento` ) ";
+            $sql = $sql."VALUES (".$cnpj.", ".$id_categoria.", ".$valor.", '".$data_pedido."', ".$disponivel.", ".$dimensao.", ".$peso.", '".$rua."', ".$numero.", '".$bairro."', '".$cidade."', '".$complemento."') ";
         echo $sql;
             if(mysqli_query($this->conn, $sql)) {
                 header("location: ../.php?status=sucess");
@@ -37,8 +37,8 @@ class DataBaseService {
 }
 
     if(!empty($_POST)) {
-    
-
+        $cnpj = $POST_['cnpj'];
+       
 
         $realizarCadastro = new DataBaseService();
         $realizarCadastro -> adicionarPedido();
