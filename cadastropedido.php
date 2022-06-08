@@ -32,13 +32,23 @@ require_once('header.php');
       </div>
       <div class="mt-1 md:mt-0 md:col-span-2">
         <!--formulário-->
-        <form action="create/cadastropedido.php" method="POST">
+        <form action="create/cadastropedido2.php" method="POST">
           <div class="shadow overflow-hidden sm:rounded-md">
             <div class="px-4 py-5 bg-white sm:p-6">
               <div class="grid grid-cols-6 gap-6">
                 <div class="col-span-6 sm:col-span-3">
                   <label for="first-name" class="block text-base font-medium text-gray-700">CNPJ</label>
                   <input type="number" name="cnpj" id="cnpj" placeholder="XX.XXX.XXX/0001-XX." class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+
+                <div class="col-span-6 sm:col-span-3 lg:col-span-1">
+                  <label for="id_categoria" class="block text-base font-medium text-gray-700">Categoria</label>
+                  <input list="id_categoria"  class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                  <datalist id="id_categoria"  class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    <option value="Alimentício">
+                    <option value="B">
+                  </datalist>
+                  <!--<input type="number" name="categoria" id="categoria" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">-->
                 </div>
 
                 <div class="col-span-6 sm:col-span-3 lg:col-span-1">
