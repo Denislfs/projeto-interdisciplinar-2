@@ -21,12 +21,25 @@ class DataBaseService {
         mysqli_close($this->conn);
     }
 
-
-    public function adicionarPedido($cnpj, $id_categoria, $valor, $data_pedido, $disponivel, $dimensao, $peso, $rua, $numero, $bairro, $cidade, $complemento) {
+    // funcao para disponibilidade do pedido
+    public function disponivel()
+    {
+            if($$disponivel_sim == sim)
+            {
+               $sql = "INSERT INTO pedido (`disponivel`)
+               VALUES ('1')";
+            }
+            elseif($disponivel_nao == nao)
+            {
+                $sql = "INSERT INTO pedido(`disponivel`)
+                VALUES ('0')";
+            }
+    }
+    public function adicionarPedido($cnpj, $id_categoria, $valor, $data_pedido, $dimensao, $peso, $rua, $numero, $bairro, $cidade, $complemento) {
 
             // Preparando o comando SQL
-            $sql = "INSERT INTO  (`cnpj`, `id_categoria`, `valor`, `data_pedido`, `disponivel`, `dimensao`, `peso`, `rua`, `numero`, `bairro`, `cidade`, `complemento` ) ";
-            $sql = $sql."VALUES (".$cnpj.", ".$id_categoria.", ".$valor.", '".$data_pedido."', ".$disponivel.", ".$dimensao.", ".$peso.", '".$rua."', ".$numero.", '".$bairro."', '".$cidade."', '".$complemento."') ";
+            $sql = "INSERT INTO pedido (`cnpj`, `id_categoria`, `valor`, `data_pedido`, `dimensao`, `peso`, `rua`, `numero`, `bairro`, `cidade`, `complemento` ) ";
+            $sql = $sql."VALUES (".$cnpj.", '".$id_categoria."', ".$valor.", ".$data_pedido.", '".$dimensao."', '".$peso."', '".$rua."', ".$numero.", '".$bairro."', '".$cidade."', '".$complemento."') ";
         echo $sql;
             if(mysqli_query($this->conn, $sql)) {
                 header("location: ../.php?status=sucess");
@@ -37,13 +50,22 @@ class DataBaseService {
 }
 
     if(!empty($_POST)) {
-        $cnpj = $POST_['cnpj'];
-       
+        $cnpj = $_POST['cnpj'];
+        $id_categoria = $_POST['id_categoria'];
+        $valor = $_POST['valor'];
+        $data_pedido = $_POST['data_pedido'];
+        $disponivel_sim = $_POST['disponivel_sim'];
+        $disponivel_nao = $_POST['disponivel_nao'];
+        $dimensao = $_POST['dimensao'];
+        $peso = $_POST['peso'];
+        $rua = $_POST['rua'];
+        $numero = $_POST['numero'];
+        $bairro = $_POST['bairro'];
+        $cidade = $_POST['cidade'];
+        $complemento = $_POST['complemento'];
 
         $realizarCadastro = new DataBaseService();
-        $realizarCadastro -> adicionarPedido();
+        $realizarCadastro -> adicionarPedido($cnpj, $id_categoria, $valor, $data_pedido, $disponivel, $dimensao, $peso, $cidade, $rua, $bairro, $numero, $complemento);
     };
     
-?>
-
 ?>
