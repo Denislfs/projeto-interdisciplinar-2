@@ -63,6 +63,10 @@
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
                                     Delete um estabelecimento
                                 </a>
+                                <a href="deletarpedido.php"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
+                                    Delete um pedido
+                                </a>
                             </div>
                         </div>
                     </li>
