@@ -55,6 +55,10 @@
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
                                     Faça um pedido
                                 </a>
+                                <a href="deletarentreg.php"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
+                                    Delete um entregador
+                                </a>
                             </div>
                         </div>
                     </li>
