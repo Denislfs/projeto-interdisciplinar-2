@@ -9,7 +9,7 @@ require_once('header.php');
     <title>Cadastro de Pedidos</title>
     <script>
         function atencao(){
-            alert("Atenção!!! a página não foi finalizada, portanto os dados não serão inseridos");
+            alert("Atenção!!! o CNPJ precisa já estar cadastrado");
         }
     </script>
 </head>
@@ -40,15 +40,14 @@ require_once('header.php');
                   <label for="first-name" class="block text-base font-medium text-gray-700">CNPJ</label>
                   <input type="number" name="cnpj" id="cnpj" placeholder="XX.XXX.XXX/0001-XX." class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                 </div>
-
-                <div class="col-span-6 sm:col-span-3 lg:col-span-1">
-                  <label for="id_categoria" class="block text-base font-medium text-gray-700">Categoria</label>
-                  <input list="id_categoria"  class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                  <datalist id="id_categoria"  class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    <option value="Alimentício">
-                    <option value="B">
-                  </datalist>
-                  <!--<input type="number" name="categoria" id="categoria" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">-->
+                <div class="col-span-6 sm:col-span-3 lg:col-span-1">  
+                  <label for="id_categoria" class="sr-only block text-base font-medium text-gray-700">Selecione</label>
+                  <select id="id_categoria" name="id_categoria" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    <option value="">Escolha</option>
+                    <option value="1">alimentício</option>
+                    <option value="0">nda</option>
+                    <!--<input type="number" name="categoria" id="categoria" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">-->
+                  </select><br><br>
                 </div>
 
                 <div class="col-span-6 sm:col-span-3 lg:col-span-1">
@@ -56,9 +55,9 @@ require_once('header.php');
                   <input type="number" name="valor" id="valor" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                 </div>
 
-                <div class="col-span-6 sm:col-span-3 lg:col-span-1">
+                <div class="col-span-6 sm:col-span-3 lg:col-start-1 lg:col-end-3">
                   <label for="data" class="block text-base font-medium text-gray-700">Data</label>
-                  <input type="date" name="data" id="data" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                  <input type="datetime-local" name="data_pedido" id="data_pedido" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                 </div>
 
                 <div class="col-span-6 sm:col-span-3 lg:col-span-1">
@@ -91,6 +90,11 @@ require_once('header.php');
                   <input type="text" name="rua" id="rua" autocomplete="rua" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                 </div>
 
+                <div class="col-span-6 sm:col-span-3 lg:col-span-5">
+                  <label for="complemento" class="block text-base font-medium text-gray-700">Complemento</label>
+                  <input type="text" name="complemento" id="complemento" autocomplete="rua" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                   <label for="region" class="block text-base font-medium text-gray-700">Bairro</label>
                   <input type="text" name="bairro" id="bairro" autocomplete="bairro" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
@@ -100,7 +104,6 @@ require_once('header.php');
                   <label for="postal-code" class="block text-base font-medium text-gray-700">Numero</label>
                   <input type="text" name="numero" id="numero" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                 </div>
-              
             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
             <button onclick="atencao()" type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Salvar</button>
             </div>
