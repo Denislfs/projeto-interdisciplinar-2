@@ -38,18 +38,25 @@ require_once('header.php');
               <div class="grid grid-cols-6 gap-6">
                 <div class="col-span-6 sm:col-span-3">
                   <label for="first-name" class="block text-base font-medium text-gray-700">CNPJ</label>
-                  <input type="number" name="cnpj" id="cnpj" placeholder="XX.XXX.XXX/0001-XX." class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                  <input type="number" name="cnpj" id="cnpj" placeholder="XX.XXX.XXX/0001-XX." class="px-2 h-10 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                 </div>
-                <div class="col-span-6 sm:col-span-3 lg:col-span-1">  
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="id_categoria" class="block mb-1 text-base font-medium text-gray-900 text-gray-700">Categoria</label>
+                  <select id="id_categoria" name="id_categoria" class="h-10 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    <option selected>Escolha uma categoria</option>
+                    <option value="1">Alimentício</option>
+                  </select>
+                </div>
+                <!--
+                <div class="col-span-6 sm:col-span-3">  
                   <label for="id_categoria" class="sr-only block text-base font-medium text-gray-700">Selecione</label>
                   <select id="id_categoria" name="id_categoria" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                     <option value="">Escolha</option>
                     <option value="1">alimentício</option>
                     <option value="0">nda</option>
-                    <!--<input type="number" name="categoria" id="categoria" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">-->
                   </select><br><br>
                 </div>
-
+      -->
                 <div class="col-span-6 sm:col-span-3 lg:col-span-1">
                   <label for="valor" class="block text-base font-medium text-gray-700">Valor</label>
                   <input type="number" name="valor" id="valor" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
