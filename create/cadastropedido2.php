@@ -28,7 +28,7 @@ class DataBaseService {
             $sql = $sql."VALUES (".$cnpj.", '".$id_categoria."', ".$valor.", '".$data_pedido."', '".$dimensao."', '".$peso."', '".$rua."', '".$numero."', '".$bairro."', '".$cidade."', '".$complemento."') ";
         echo $sql;
             if(mysqli_query($this->conn, $sql)) {
-                header("location: ../.php?status=sucess");
+                header("location: ../cadastropedido.php?status=sucess");
             } else {
                 echo("Falha ao realizar o cadastro" . $sql . mysqli_error($this->conn));
             }
