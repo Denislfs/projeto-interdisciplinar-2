@@ -10,7 +10,8 @@ class DataBaseService {
     {
         $this->conn = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
 
-        if(!$this->conn) {
+        if(!$this->conn) 
+        {
             die("Falha na conexão: " . mysqli_connect_error());
         }
     }
