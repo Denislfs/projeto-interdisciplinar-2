@@ -1,27 +1,9 @@
 <?php
 
-class DataBaseService{
-    // Parâmetros da conexão com o banco de dados
-    public $servername = 'localhost';
-    public $username = 'root';
-    public $password = '';
-    public $dbname = 'bikelive';
+define('__ROOT__', dirname(dirname(__FILE__)));
+require_once (__ROOT__.'./bd/connection.php');
 
-    //função para conexão
-    public function __construct()
-    {
-        // Criando a conexão
-       $this->conn = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
-        if (!$this->conn) {
-            die("Falha na conexão: " . mysqli_connect_error());
-        }
-    }
-
-    //função para destruir conexão
-    public function __destruct()
-    {
-        mysqli_close($this->conn);
-    }
+class DataBase extends DataBaseService{
 
     public function selecionarEntregador()
     {
@@ -45,6 +27,6 @@ class DataBaseService{
     }
 
 }
-$realizarListagem = new DataBaseService();
+$realizarListagem = new DataBase();     
 $realizarListagem -> selecionarEntregador();
 ?>
