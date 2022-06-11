@@ -1,27 +1,9 @@
 <?php
 
-class DataBaseService {
-    public $servername = 'localhost';
-    public $username = 'root';
-    public $password = '';
-    public $dbname = 'bikelive';
+define('__ROOT__', dirname(dirname(__FILE__)));
+require_once (__ROOT__.'./bd/connection.php');
 
-    //função para conexão
-    public function __construct()
-    {
-        $this->conn = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
-
-        if(!$this->conn) {
-            die("Falha na conexão: " . mysqli_connect_error());
-        }
-    }
-
-    //função para destruir conexão
-    public function __destruct()
-    {
-        mysqli_close($this->conn);
-    }
-
+class DataBase extends DataBaseService{
     //validação de cpf
     private function cpf($cpf) {
         if ($cpf < 11) {
@@ -57,7 +39,7 @@ class DataBaseService {
         $complemento = $_POST['complemento'];
 
 
-        $realizarCadastro = new DataBaseService();
+        $realizarCadastro = new DataBase();
         $realizarCadastro -> adicionarEntregador($cpf, $nome, $celular, $email, $data_nasc, $endereco, $numero, $bairro, $cidade, $complemento);
     };
     
