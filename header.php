@@ -67,6 +67,14 @@
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
                                     Delete um pedido
                                 </a>
+                                <a href="atualizarentreg.php"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
+                                    Atualize um entregador
+                                </a>
+                                <a href="listarentreg.php"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
+                                    Entregadores cadatrados
+                                </a>
                             </div>
                         </div>
                     </li>
