@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="mt-1 md:mt-0 md:col-span-2">
-<!-- formulário -->
+        <!-- formulário -->
         <form action="./delete/deletarentreg2.php" method="post">
             <div class="mb-2">
                 <div class="shadow overflow-hidden sm:rounded-md">
@@ -40,9 +40,8 @@
 
         <div class="col">
             <p class="text-lg font-medium leading-6 text-gray-900">Entregadores cadastrados</p>
-                <?php
-                require_once('./read/listarentreg.php')
-                ?>
+            <?php require_once ('./read/listarentreg2.php');?>
+        
         </div>
     </div>
 </div>
