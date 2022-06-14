@@ -44,7 +44,7 @@ require_once('header.php');
                   <label for="id_categoria" class="block mb-1 text-base font-medium text-gray-900 text-gray-700">Categoria</label>
                   <select id="id_categoria" name="id_categoria" class="h-10 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                     <option selected>Escolha uma categoria</option>
-                    <option value="1">Alimentício</option>
+                    <option value="2">Alimentício</option>
                   </select>
                 </div>
 
