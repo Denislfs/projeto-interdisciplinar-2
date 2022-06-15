@@ -47,38 +47,30 @@
         <tr>
             <td align="center">
                 <a href="https://github.com/joicerodrigues">
-                    <img src="https://avatars.githubusercontent.com/u/51415493?v=4" width="100px;"
-                        alt="Foto da Joice" />
+                    <img src="https://avatars.githubusercontent.com/u/51415493?v=4" width="100px;" alt="Foto da Joice" />
                     <br>
                     <sub> <b>Joice Rodrigues</b> </sub>
                 </a>
             </td>
             <td align="center">
                 <a href="https://github.com/juliatangerino">
-                    <img src="https://pps.whatsapp.net/v/t61.24694-24/261297518_427193629027905_7156472741257448480_n.jpg?ccb=11-4&oh=4118f682fa0780152465ce4b6298c236&oe=629C0D3E" width="100px;" alt="Foto da Juliana Tangerino" />
+                    <img src="https://avatars.githubusercontent.com/u/46140018?s=400&u=3ad735ab01eca87b21f2e1bb1b526a255368d03b&v=4" width="100px;" alt="Foto da Juliana" />
                     <br>
                     <sub> <b>Juliana Tangerino</b> </sub> 
                 </a>
             </td>
             <td align="center">
                 <a href="https://github.com/Denislfs">
-                    <img src="https://pps.whatsapp.net/v/t61.24694-24/121077744_1008220806343115_6445234113877075963_n.jpg?ccb=11-4&oh=01_AVyzn-kDBFp-ak0SVERLVxh1KZkqbVhKiZN_pjeh9oBfFQ&oe=629B1CB5" width="100px;" alt="Foto do Denis" />
+                    <img src="https://avatars.githubusercontent.com/u/91102551?v=4" width="100px;" alt="Foto do Denis" />
                     <br>
                     <sub> <b>Denis</b> </sub> 
                 </a>
             </td>
             <td align="center">
                 <a href="https://github.com/vitoreduardomanhaspereira">
-                    <img src="https://pps.whatsapp.net/v/t61.24694-24/55939621_427868168024006_7892795940262641664_n.jpg?ccb=11-4&oh=01_AVwM2ZHi92ytzEIpNlmgD_B9xgU73NKiJcAmKzS05pyvMQ&oe=629D3190" width="100px;" alt="Foto do Victor" />
+                    <img src="https://avatars.githubusercontent.com/u/91102583?v=4" width="100px;" alt="Foto do Victor" />
                     <br>
                     <sub> <b>Vitor Pereira</b> </sub> 
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/LailaStence">
-                    <img src="https://avatars.githubusercontent.com/u/62487766?v=4" width="100px;" alt="Foto da Laila"  />
-                    <br>
-                    <sub> <b>Laila M. Stence</b> </sub> 
                 </a>
             </td>
         </tr>

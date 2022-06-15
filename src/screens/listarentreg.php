@@ -1,6 +1,6 @@
 <?php
 /*chamando a header*/
-require_once('header.php')
+require_once('../components/header.php')
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -28,9 +28,9 @@ require_once('header.php')
       </div>
       <div class="mt-1 md:mt-0 md:col-span-2 lg:col-start-5">
         <!--formulario-->
-        <form action="create/cadastroentreg2.php" method="POST">
+        <form action="../crud/create/cadastroentreg2.php" method="POST">
           <div class="shadow overflow-hidden sm:rounded-md ml-12">   
-            <?php require_once ('./read/listarentreg2.php') ?>
+            <?php require_once ('../crud/read/listarentreg2.php') ?>
           </div>
         </form>
       </div>
@@ -42,5 +42,5 @@ require_once('header.php')
 </div>
 
 <?php
-require_once('footer.php');
+require_once('../components/header.php');
 ?>

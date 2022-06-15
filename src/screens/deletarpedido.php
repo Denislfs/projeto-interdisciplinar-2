@@ -1,5 +1,5 @@
 <?php
-    require_once('header.php')
+    require_once('../components/header.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +16,13 @@
         <div class="md:col-span-1">
             <div class="px-4 sm:px-0">
                 <h3 class="text-lg font-medium leading-6 text-gray-900">Delete Pedidos</h3>
-                <img class="leading-6 mt-6" src="src/assets/img/shopping-cart.png">
+                <img class="leading-6 mt-6" src="../src/assets/img/shopping-cart.png">
                 <p class="mt-1 text-sm text-gray-600"></p>
             </div>
         </div>
         <div class="mt-1 md:mt-0 md:col-span-2">
 <!-- formulário -->
-        <form action="./delete/deletarpedido2.php" method="post">
+        <form action="../crud/delete/deletarpedido2.php" method="post">
             <div class="mb-2">
                 <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white sm:p-6">
@@ -41,11 +41,11 @@
         <div class="col">
             <p class="text-lg font-medium leading-6 text-gray-900">Pedidos cadastrados</p>
                 <?php
-                require_once('./read/listarpedido.php')
+                require_once('../crud/read/listarpedido.php')
                 ?>
         </div>
     </div>
 </div>
 <?php
-require_once('footer.php')
+require_once('../components/footer.php')
 ?>

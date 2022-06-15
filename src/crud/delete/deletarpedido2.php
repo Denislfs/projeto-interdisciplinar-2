@@ -1,14 +1,14 @@
 <?php
 
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once (__ROOT__.'./bd/connection.php');
+require_once (__ROOT__.'/database/connection.php');
 
 class DataBase extends DataBaseService{
-    
-    public function deletarEstabelecimento($cnpj) {
+
+    public function deletarEstabelecimento($id) {
         
         // Preparando o comando SQL
-        $sql = "DELETE FROM estabelecimento WHERE cnpj = ".$cnpj."";
+        $sql = "DELETE FROM pedido WHERE id = ".$id."";
         
         
         if(mysqli_query($this->conn, $sql)) {
@@ -19,7 +19,7 @@ class DataBase extends DataBaseService{
         }
         
         // Function call
-        header("location: ./deletarest.php?status=sucess");
+        header("location: ./deletarpedido.php?status=sucess");
         function_alert("Cadastro deletado com sucesso!");
         
 
@@ -31,9 +31,9 @@ class DataBase extends DataBaseService{
 }
 
     if(!empty($_POST)) {
-        $cnpj = $_POST['cnpj'];
+        $id = $_POST['id'];
         $deletarCadastro = new DataBase();
-        $deletarCadastro -> deletarEstabelecimento($cnpj);
+        $deletarCadastro -> deletarEstabelecimento($id);
     };
     
 ?>

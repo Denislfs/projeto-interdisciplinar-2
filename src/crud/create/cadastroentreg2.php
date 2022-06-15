@@ -1,7 +1,7 @@
 <?php
 
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once (__ROOT__.'./bd/connection.php');
+require_once (__ROOT__.'/database/connection.php');
 
 class DataBase extends DataBaseService{
     //validação de cpf

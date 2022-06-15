@@ -1,5 +1,5 @@
 <?php
-require_once('header.php');
+require_once('../components/header.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -21,13 +21,13 @@ require_once('header.php');
       <div class="md:col-span-1">
         <div class="px-4 sm:px-0">
           <h3 class="text-lg font-medium leading-6 text-gray-900">Cadastro de Estabelecimentos</h3>
-          <img class="leading-6 mt-12 " src="src/assets/img/man-phone.png">
+          <img class="leading-6 mt-12 " src="../assets/img/man-phone.png">
           <p class="mt-1 text-sm text-gray-600"></p>
         </div>
       </div>
       <div class="mt-1 md:mt-0 md:col-span-2">
         <!--formulário-->
-        <form action="create/cadastroest2.php" method="POST">
+        <form action="../crud/create/cadastroest2.php" method="POST">
           <div class="shadow overflow-hidden sm:rounded-md">
             <div class="px-4 py-5 bg-white sm:p-6">
               <div class="grid grid-cols-6 gap-6">
@@ -102,5 +102,5 @@ require_once('header.php');
 </div>
 	
 <?php
-require_once('footer.php');
+require_once('../components/footer.php');
 ?>

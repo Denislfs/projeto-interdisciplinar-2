@@ -1,7 +1,7 @@
 <?php
 
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once (__ROOT__.'./bd/connection.php');
+require_once (__ROOT__.'/database/connection.php');
 
 class DataBase extends DataBaseService{
 
@@ -10,7 +10,7 @@ class DataBase extends DataBaseService{
             // Preparando o comando SQL
             $sql = "INSERT INTO estabelecimento (`cnpj`, `razao_social`, `nome_fantasia`, `telefone`, `cep`, `uf`, `cidade`, `bairro`, `rua`, `numero`) ";
             $sql = $sql."VALUES (".$cnpj.", '".$razao_social."', '".$nome_fantasia."', ".$telefone.", '".$cep."', '".$uf."', '".$cidade."', '".$bairro."', '".$rua."', ".$numero." ) ";
-        echo $sql;
+            echo $sql;
             if(mysqli_query($this->conn, $sql)) {
                 header("location: ../cadastroest.php?status=sucess");
             } else {
@@ -35,5 +35,3 @@ class DataBase extends DataBaseService{
         $realizarCadastro = new DataBase();
         $realizarCadastro -> adicionarEstabelecimento($cnpj, $razao_social, $nome_fantasia, $telefone, $cep, $uf, $cidade, $bairro, $rua, $numero);
     };
-    
-?>

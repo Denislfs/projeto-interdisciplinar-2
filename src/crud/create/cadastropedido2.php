@@ -1,7 +1,7 @@
 <?php
 
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once (__ROOT__.'./bd/connection.php');
+require_once (__ROOT__.'/database/connection.php');
 
 class DataBase extends DataBaseService{
 
@@ -10,7 +10,7 @@ class DataBase extends DataBaseService{
             // Preparando o comando SQL
             $sql = "INSERT INTO pedido (`cnpj`, `id_categoria`, `valor`, `data_pedido`, `dimensao`, `peso`, `rua`, `numero`, `bairro`, `cidade`, `complemento` ) ";
             $sql = $sql."VALUES (".$cnpj.", '".$id_categoria."', ".$valor.", '".$data_pedido."', '".$dimensao."', '".$peso."', '".$rua."', '".$numero."', '".$bairro."', '".$cidade."', '".$complemento."') ";
-        echo $sql;
+            echo $sql;
             if(mysqli_query($this->conn, $sql)) {
                 header("location: ../cadastropedido.php?status=sucess");
             } else {
@@ -35,5 +35,3 @@ class DataBase extends DataBaseService{
         $realizarCadastro = new DataBase();
         $realizarCadastro -> adicionarPedido($cnpj, $id_categoria, $valor, $data_pedido, $dimensao, $peso, $cidade, $rua, $bairro, $numero, $complemento);
     };
-    
-?>

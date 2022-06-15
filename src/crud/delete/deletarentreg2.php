@@ -1,14 +1,12 @@
 <?php
-
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once (__ROOT__.'./bd/connection.php');
-
+require_once (__ROOT__.'/database/connection.php');
 class DataBase extends DataBaseService{
 
-    public function deletarEstabelecimento($id) {
+    public function deletarEntregador($id) {
         
         // Preparando o comando SQL
-        $sql = "DELETE FROM pedido WHERE id = ".$id."";
+        $sql = "DELETE FROM entregador WHERE id = ".$id."";
         
         
         if(mysqli_query($this->conn, $sql)) {
@@ -19,7 +17,7 @@ class DataBase extends DataBaseService{
         }
         
         // Function call
-        header("location: ./deletarpedido.php?status=sucess");
+        header("location: ../deletarentregador.php?status=sucess");
         function_alert("Cadastro deletado com sucesso!");
         
 
@@ -33,7 +31,7 @@ class DataBase extends DataBaseService{
     if(!empty($_POST)) {
         $id = $_POST['id'];
         $deletarCadastro = new DataBase();
-        $deletarCadastro -> deletarEstabelecimento($id);
+        $deletarCadastro -> deletarEntregador($id);
     };
     
 ?>
