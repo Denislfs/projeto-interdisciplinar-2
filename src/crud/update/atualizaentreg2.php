@@ -56,7 +56,7 @@ class DataBase extends DataBaseService{
 			$sql = $this->conn->query($query);
 			if ($sql==true) 
             {
-			    header("Location:./atualizarentreg.php");
+			    header("Location:./atualizarentreg.php"); 
 			}else{
 			    echo "Registration updated failed try again!";
 			}
