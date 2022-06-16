@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Jun-2022 às 01:42
+-- Tempo de geração: 16-Jun-2022 às 21:48
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
 
@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bikelive2`
+-- Banco de dados: `bikelivery`
 --
-CREATE DATABASE IF NOT EXISTS `bikelive2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `bikelive2`;
+CREATE DATABASE IF NOT EXISTS `bikelivery` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `bikelivery`;
 
 DELIMITER $$
 --
@@ -64,18 +64,6 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `idade` (`data_inicio` DATE) RETURNS 
     DECLARE data_atual DATE;
     Select current_date()into data_atual;
     RETURN year(data_atual)-year(data_inicio);
-END$$
-
-CREATE DEFINER=`root`@`localhost` FUNCTION `select_entregador` (`id_entregador` INT) RETURNS VARCHAR(120) CHARSET utf8mb4 BEGIN
-    Declare retorno varchar(120);
-    Declare quantidade int(1);
-      select count(*) into quantidade from entregador where id_entregador=id;
-        if quantidade=1 then
-            select nome INTO retorno from entregador where id=id_entregador;
-        else
-          SET retorno='Entregador inexistente';
-        end if;
-        return (retorno);
 END$$
 
 DELIMITER ;
@@ -133,6 +121,7 @@ DELIMITER ;
 CREATE TABLE `entregador` (
   `id` int(11) NOT NULL,
   `nome` varchar(60) NOT NULL,
+  `email` varchar(60) NOT NULL,
   `cpf` varchar(60) NOT NULL,
   `celular` varchar(60) NOT NULL,
   `data_nasc` date NOT NULL,
