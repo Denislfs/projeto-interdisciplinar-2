@@ -62,8 +62,8 @@
                             <a href="../../src/screens/atualizarentreg.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
                                 Atualize um entregador
                             </a>
-                            <a href="../../src/screens/listarentreg.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
-                                Entregadores cadatrados
+                            <a href="../../src/screens/atualizaest.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-500 hover:text-white">
+                                Atualize um estabelecimento
                             </a>
                         </div>
                     </div>

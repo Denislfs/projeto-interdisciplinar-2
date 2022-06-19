@@ -1,29 +1,23 @@
+<?php
+  require_once('../components/header.php');
+  include '../crud/update/atualizaest2.php';
+
+  $DataBaseService = new DataBase();
+     
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deletar Estabelecimentos</title>
-    <?php
-        require_once('../components/header.php')
-    ?>
+    <title>Atualização de Estabelecimentos</title>
 </head>
 <body>
-<?php
-    include '../crud/delete/deletarest2.php';
-    $DataBaseService = new DataBase();
-
-    if(isset($_GET['cnpj']) && !empty($_GET['cnpj'])) {
-        $cnpj = $_GET['cnpj'];
-        $DataBaseService->deletarEstabelecimento($cnpj);
-    }
-?>
 <h2 class="text-lg font-medium leading-6 text-gray-900">Estabelecimentos cadastrados</h2>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
   <table class="w-full font-medium text-left text-gray-400 dark:text-gray-700">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-550 dark:text-gray-700">
-      <tr>
+    <tr>
         <th>CNPJ </th>
         <th>Razão Social </th>
         <th>Nome Fantasia </th>
@@ -57,8 +51,10 @@
           <div class="flex">
             <div class="flex items-center mr-4">
 
-              <a href="deletarest.php?cnpj=<?php echo $dados['cnpj'] ?>">
-              <svg class="h-6 w-6 text-red-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="3 6 5 6 21 6" />  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
+              <a href="editest.php?editCnpj=<?php echo $dados['cnpj'] ?>">
+              <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+              </svg>
             </div>
           </div>
           </td>

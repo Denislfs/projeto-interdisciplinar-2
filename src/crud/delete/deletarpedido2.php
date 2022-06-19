@@ -5,23 +5,30 @@ require_once (__ROOT__.'/database/connection.php');
 
 class DataBase extends DataBaseService{
 
-    public function deletarEstabelecimento($id) {
+    public function mostrarDados()
+	{
+		$query = "SELECT * FROM pedido";
+		 $result = $this->conn->query($query);
+		if ($result->num_rows > 0) 
+        {
+		    $data = array();
+		    while ($row = $result->fetch_assoc()) 
+            {
+		           $data[] = $row;
+		    }
+			 return $data;
+		}else{
+			echo "No found records";
+		}
+	}
+
+    public function deletarPedido($id) {
         
         // Preparando o comando SQL
-        $sql = "DELETE FROM pedido WHERE id = ".$id."";
-        
-        
-        if(mysqli_query($this->conn, $sql)) {
-            // Function definition
-            function function_alert($message) {
-            // Display the alert box 
-            echo "<script>alert('$message');</script>";
-        }
-        
-        // Function call
-        header("location: ./deletarpedido.php?status=sucess");
-        function_alert("Cadastro deletado com sucesso!");
-        
+        $query = "DELETE FROM pedido WHERE id = '$id'";
+        $sql = $this->conn->query($query);
+                
+        if($sql==true) {
 
         } else {
             echo("Falha ao deletar" . $sql . mysqli_error($this->conn));
@@ -29,11 +36,4 @@ class DataBase extends DataBaseService{
 
     }
 }
-
-    if(!empty($_POST)) {
-        $id = $_POST['id'];
-        $deletarCadastro = new DataBase();
-        $deletarCadastro -> deletarEstabelecimento($id);
-    };
-    
 ?>

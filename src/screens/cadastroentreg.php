@@ -102,7 +102,6 @@ require_once('../components/header.php')
       </div>
     </div>
   </div>
-
-  <?php
+<?php
   require_once('../components/footer.php');
-  ?>
+?>
