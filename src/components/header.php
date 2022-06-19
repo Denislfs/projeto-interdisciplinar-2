@@ -1,3 +1,6 @@
+<?php
+include('C:\xampp\htdocs\projeto-interdisciplinar-2\src\login\verefica_login.php');   
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +26,8 @@
     <!--Navbar-->
     <nav class="flex items-center place-content-around rounded-md">
         <div>
-            <h3>LOGO</h3>
+             Bem vindo ao Painel, <?php echo $_SESSION['id']; ?>.        
+             <a href="logout.php">Sair</a>    
         </div>
         <div>
             <ul class="flex items-center justify-center gap-x-16 py-12 text-gray-500">
