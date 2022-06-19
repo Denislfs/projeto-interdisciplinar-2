@@ -5,7 +5,7 @@ require_once (__ROOT__.'/database/connection.php');
 
 class DataBase extends DataBaseService{
 
-    public function adicionarPedido($cnpj, $id_categoria, $valor, $data_pedido, $dimensao, $peso, $rua, $numero, $bairro, $cidade, $complemento) {
+    public function adicionarPedido($cnpj, $id_categoria, $destinatario, $valor, $data_pedido, $dimensao, $peso, $rua, $numero, $bairro, $cidade, $complemento) {
 
             // Preparando o comando SQL
             $sql = "INSERT INTO pedido (`cnpj`, `id_categoria`, `destinatario`, `valor`, `data_pedido`, `dimensao`, `peso`, `rua`, `numero`, `bairro`, `cidade`, `complemento` ) ";
