@@ -120,3 +120,6 @@
     <div class="border-t border-gray-200"></div>
   </div>
 </div>
+<?php
+  require_once('../components/footer.php');
+?>

@@ -67,3 +67,6 @@
     </tbody>
   </table>
 </div>
+<?php
+  require_once('../components/footer.php');
+?>
