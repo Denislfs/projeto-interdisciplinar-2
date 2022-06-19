@@ -12,7 +12,7 @@ class DataBase extends DataBaseService{
             $sql = $sql."VALUES (".$cnpj.", '".$id_categoria."', ".$valor.", '".$data_pedido."', '".$dimensao."', '".$peso."', '".$rua."', '".$numero."', '".$bairro."', '".$cidade."', '".$complemento."') ";
             echo $sql;
             if(mysqli_query($this->conn, $sql)) {
-                header("location: ../cadastropedido.php?status=sucess");
+                header("location: http://localhost/projeto-interdisciplinar-2/src/screens/cadastropedido.php");
             } else {
                 echo("Falha ao realizar o cadastro" . $sql . mysqli_error($this->conn));
             }
