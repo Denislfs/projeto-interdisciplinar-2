@@ -48,6 +48,11 @@ require_once('../components/header.php');
                   </select>
                 </div>
 
+                <div class="col-span-6 sm:col-span-6">
+                    <label for="first-name" class="block font-medium text-base text-gray-700">Destinatário</label>
+                    <input type="text" name="destinatario" id="destinatario" autocomplete="given-name" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                  </div>
+
                 <div class="col-span-6 sm:col-span-3 lg:col-span-1">
                   <label for="valor" class="block text-base font-medium text-gray-700">Valor</label>
                   <input type="number" name="valor" id="valor" class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
