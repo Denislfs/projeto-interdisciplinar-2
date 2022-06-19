@@ -4,7 +4,7 @@ class DataBaseService {
     public $servername = 'localhost';
     public $username = 'root';
     public $password = '';
-    public $dbname = 'bikelive';
+    public $dbname = 'bikelivery';
 
     public function __construct()
     {
