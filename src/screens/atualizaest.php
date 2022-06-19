@@ -10,10 +10,10 @@
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualização de Entregadores</title>
+    <title>Atualização de Estabelecimentos</title>
 </head>
 <body>
-<h2 class="text-lg font-medium leading-6 text-gray-900">Entregadores(as) cadastrados</h2>
+<h2 class="text-lg font-medium leading-6 text-gray-900">Estabelecimentos cadastrados</h2>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
   <table class="w-full font-medium text-left text-gray-400 dark:text-gray-700">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-550 dark:text-gray-700">

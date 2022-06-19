@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualize o Estabelecimento</title>
+    <title>Edição de Estabelecimentos</title>
     <!--Importando Script tailwindcss-->
     <script src="https://cdn.tailwindcss.com"></script>
     <!--Importando Script-->
@@ -42,7 +42,7 @@
     <div class="md:grid md:grid-cols-3 md:gap-6">
       <div class="md:col-span-1">
         <div class="px-4 sm:px-0">
-          <h3 class="text-lg font-medium leading-6 text-gray-900">Atualize o Estabelecimento</h3>
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Edição de Estabelecimentos</h3>
           <img class="leading-6 mt-12 " src="../assets/img/man-phone.png">
           <p class="mt-1 text-sm text-gray-600"></p>
         </div>
