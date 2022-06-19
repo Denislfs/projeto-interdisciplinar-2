@@ -1,6 +1,3 @@
-<?php
-    require_once('../components/header.php')
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,44 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deletar Estabelecimentos</title>
+    <?php
+        require_once('../components/header.php')
+    ?>
 </head>
 <body>
-<!--titulo e imagem ao lado do formulário-->
-<div class="mt-10 sm:mt-0">
-    <div class="md:grid md:grid-cols-3 md:gap-6">
-        <div class="md:col-span-1">
-            <div class="px-4 sm:px-0">
-                <h3 class="text-lg font-medium leading-6 text-gray-900">Delete Estabelecimentos</h3>
-                <img class="leading-6 mt-6" src="../assets/img/man-phone.png">
-                <p class="mt-1 text-sm text-gray-600"></p>
-            </div>
-        </div>
-        <div class="mt-1 md:mt-0 md:col-span-2">
-<!-- formulário -->
-        <form action="../crud/delete/deletarest2.php" method="post">
-            <div class="mb-2">
-                <div class="shadow overflow-hidden sm:rounded-md">
-                    <div class="px-4 py-5 bg-white sm:p-6">
-                        <div class="grid grid-cols-6 gap-6">
-                            <div class="col-span-6 sm:col-span-6 lg:col-span-2">
-                                <label for="nome" class="text-lg font-medium leading-6 text-gray-900">CNPJ:</label>
-                                <input type="number" id="cnpj" name="cnpj" placeholder="Digite seu CNPJ" required autofocus class="px-2 h-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-3 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Deletar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-
-        <div class="col">
-            <p class="text-lg font-medium leading-6 text-gray-900">Estabelecimentos cadastrados</p>
-                <?php
-                require_once('../crud/read/listarest.php')
-                ?>
-        </div>
-    </div>
-</div>
 <?php
-require_once('../components/footer.php')
+    include '../crud/delete/deletarest2.php';
+    $DataBaseService = new DataBase();
+
+    if(isset($_GET['cnpj']) && !empty($_GET['cnpj'])) {
+        $cnpj = $_GET['cnpj'];
+        $DataBaseService->deletarEstabelecimento($cnpj);
+    }
 ?>
+<h2 class="text-lg font-medium leading-6 text-gray-900">Estabelecimentos cadastrados</h2>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
+  <table class="w-full font-medium text-left text-gray-400 dark:text-gray-700">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-550 dark:text-gray-700">
+      <tr>
+        <th>CNPJ </th>
+        <th>Razão Social </th>
+        <th>Nome Fantasia </th>
+        <th>Telefone </th>
+        <th>CEP </th>
+        <th>UF </th>
+        <th>Cidade </th>
+        <th>Bairro </th>
+        <th>Rua </th>
+        <th>Número </th>
+        <th>Action </th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php 
+          $database = $DataBaseService->mostrarDados(); 
+          foreach ($database as $dados) {
+        ?>
+        <tr>
+          <td><?php echo $dados['cnpj'] ?></td>
+          <td><?php echo $dados['razao_social'] ?></td>
+          <td><?php echo $dados['nome_fantasia'] ?></td>
+          <td><?php echo $dados['telefone'] ?></td>
+          <td><?php echo $dados['cep'] ?></td>
+          <td><?php echo $dados['uf'] ?></td>
+          <td><?php echo $dados['cidade'] ?></td>
+          <td><?php echo $dados['bairro'] ?></td>
+          <td><?php echo $dados['rua'] ?></td>
+          <td><?php echo $dados['numero'] ?></td>
+          <td>
+          <div class="flex">
+            <div class="flex items-center mr-4">
+
+              <a href="deletarest.php?cnpj=<?php echo $dados['cnpj'] ?>">
+              <svg class="h-6 w-6 text-red-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="3 6 5 6 21 6" />  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
+            </div>
+          </div>
+          </td>
+        </tr>
+      <?php } ?>
+    </tbody>
+  </table>
+</div>
