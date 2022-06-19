@@ -49,7 +49,7 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `select_entrega` ()  BEGIN
 
-	SELECT d.id, a.data_pedido, b.nome_fantasia, a.remetente, a.dimensao, a.peso,a.rua,a.numero,a.bairro,a.complemento, a.valor, c.nome, c.celular
+	SELECT d.id, a.data_pedido, b.nome_fantasia, a.destinatario, a.dimensao, a.peso,a.rua,a.numero,a.bairro,a.complemento, a.valor, c.nome, c.celular
     FROM pedido a, estabelecimento b, entregador c, entrega d
     WHERE b.cnpj = a.cnpj AND
     c.id = d.id_entregador AND
@@ -183,7 +183,7 @@ CREATE TABLE `pedido` (
   `id` int(11) NOT NULL,
   `cnpj` int(30) NOT NULL,
   `id_categoria` int(11) NOT NULL,
-  `remetente` varchar(60) NOT NULL,
+  `destinatario` varchar(60) NOT NULL,
   `valor` decimal(15,2) NOT NULL,
   `data_pedido` datetime NOT NULL,
   `disponivel` int(1) NOT NULL DEFAULT 1,
