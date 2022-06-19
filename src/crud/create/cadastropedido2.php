@@ -34,5 +34,5 @@ class DataBase extends DataBaseService{
         $complemento = $_POST['complemento'];
 
         $realizarCadastro = new DataBase();
-        $realizarCadastro -> adicionarPedido($cnpj, $id_categoria, $valor, $data_pedido, $dimensao, $peso, $rua, $numero, $bairro, $cidade, $complemento);
+        $realizarCadastro -> adicionarPedido($cnpj, $id_categoria, $destinatario, $valor, $data_pedido, $dimensao, $peso, $rua, $numero, $bairro, $cidade, $complemento);
     };
