@@ -24,10 +24,13 @@
 						session_start();
 					}
 		
-					$_SESSION['id'] = $usuario['id'];
-					$_SESSION['nome'] = $usuario['nome'];
+					$_SESSION['Userid'] = $usuario['id'];
+					$_SESSION['Usernome'] = $usuario['nome'];
+					$_SESSION['Useremail'] = $usuario['email'];
+
+
 		
-					header("Location: http://localhost/projeto-interdisciplinar-2/index.php");
+					header("Location: ../../src/screens/cadastroentreg.php");
 		
 				} else {
 					echo "Falha ao logar! E-mail ou senha incorretos";

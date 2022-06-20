@@ -68,7 +68,7 @@
                 </ul>
             </div>
             <div class="flex items-center justify-center rounded-full text-white w-28 h-10 bg-primary">
-                <a href="./src/screens/login.html">Login</a>
+                <a href="./src/screens/login.php">Login</a>
             </div>
         </nav>
     </header>

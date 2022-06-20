@@ -27,7 +27,7 @@
         <th>Id </th>
         <th>CNPJ </th>
         <th>Categoria </th>
-        <th>Remetente </th>
+        <th>destinatario </th>
         <th>Valor </th>
         <th>Data do Pedido </th>
         <th>Disponível </th>
@@ -50,7 +50,7 @@
           <td><?php echo $dados['id'] ?></td>
           <td><?php echo $dados['cnpj'] ?></td>
           <td><?php echo $dados['id_categoria'] ?></td>
-          <td><?php echo $dados['remetente'] ?></td>
+          <td><?php echo $dados['destinatario'] ?></td>
           <td><?php echo $dados['valor'] ?></td>
           <td><?php echo $dados['data_pedido'] ?></td>
           <td><?php echo $dados['disponivel'] ?></td>

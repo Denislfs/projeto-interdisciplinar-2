@@ -26,7 +26,7 @@ include('C:\xampp\htdocs\projeto-interdisciplinar-2\src\login\verefica_login.php
     <!--Navbar-->
     <nav class="flex items-center place-content-around rounded-md">
         <div>
-             Bem vindo ao Painel, <?php echo $_SESSION['id']; ?>.        
+             Bem vindo ao Painel, <?php echo $_SESSION['Usernome']; ?>.        
              <a href="logout.php">Sair</a>    
         </div>
         <div>
